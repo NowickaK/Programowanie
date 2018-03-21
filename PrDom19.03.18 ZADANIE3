@@ -1,0 +1,20 @@
+#include <stdio.h>
+#define TEMP_WRZENIA 100
+#define TEMP_ZAMARZANIA 0
+
+int main()
+{
+  float temperatura;
+  scanf("%f",&temperatura);
+  
+  if(temperatura>=TEMP_WRZENIA){
+      printf("Stan skupienia: para wodna");
+      return 0;
+  }
+  if(temperatura<=TEMP_ZAMARZANIA){
+      printf("Stan skupienia: lód");
+      return 0;
+  }
+  printf("Stan skupienia: ciecz");
+    return 0;
+}
