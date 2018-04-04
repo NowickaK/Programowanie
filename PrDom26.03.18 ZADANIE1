@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    char reakcja;
+    char oddychanie;
+    char AED;
+    
+    printf("Czy reaguje\n");
+    scanf("%c",&reakcja);
+    printf("Czy oddycha\n");
+    scanf(" %c",&oddychanie);
+    
+    if ((reakcja=='n') && (oddychanie=='n')) {
+        printf("Wykonuj RKO\n");
+        printf("Czy posiadasz AED?");
+        scanf(" %c",&AED);
+        if(AED=='t'){
+            printf("Uzyj AED, wezwij karetke");
+        }else printf("Zadzwon po pogotowie, wykonuj RKO do przyjazdu karetki\n30 ucisniec\n2 wdechy");
+    } else if ((reakcja=='n') && (oddychanie=='t')) {
+        printf("Pozycja bezpieczna");
+    } else if ((reakcja=='t') && (oddychanie=='t')) {
+        printf("Pozycja bezpieczna");
+    }
+    return 0;
+}
