@@ -2,14 +2,19 @@
 
 int main()
 {
-    int i,j,k;
+    int i,j,k,l=5,suma=0;
     int liczba=3;
-    for(k=0;k<liczba;k++)
-    {
-    for(i=5;i>0;i--){
-    printf("\n");
-        for(j=i;j>0;j--){
-        printf("*");
-    }    }    }
-        return 0;
+    for(k=0;k<liczba;k++){
+        for(i=l;i>0;i--){
+            for(j=i;j>0;j--){
+                printf("*");
+                suma++;
+            }
+            printf("\n");
+        }
+        printf("\n");
+        l--;
+    }
+    printf("Ilosc gwiazdek: %i",suma);
+    return 0;
 }
