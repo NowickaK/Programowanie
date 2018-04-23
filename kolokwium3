@@ -5,12 +5,16 @@ int main()
     float cm;
     float in;
     float ft;
+    int i;
+    do{
    scanf("%f",&cm);
     in = cm/2.54 ;
     ft = in/12.0 ;
     
     
-    printf("%.2f cm to %.2f in , %.2f ft",cm,in,ft);
-    
+    printf("%.2f cm to %.2f in , %.2f ft\n",cm,in,ft);
+    printf("Czy powtorzyc program? (1-Tak, 0-Nie)");
+    scanf("%d",&i);
+    }while(i!=0);
     return 0;
 }
