@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    float cm;
+    float in;
+    float ft;
+   
+    in = cm/2.54 ;
+    ft = in/12.0 ;
+    
+    scanf("%f",&cm);
+    printf("%.2f cm to %.2f in , %.2f ft",cm,in,ft);
+    
+    return 0;
+}
