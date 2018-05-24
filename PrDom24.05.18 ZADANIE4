@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int minimalna(int tablica[],int rozm){
+    int m=tablica[0];
+    for (int i=0; i<rozm;i++){
+        if (tablica[i]<m){ m=tablica[i];}
+    }
+    return m;
+}
+
+int maksymalna(int tablica[],int rozm){
+    int m=tablica[0];
+    for (int i=0; i<rozm;i++){
+        if (tablica[i]>m){ m=tablica[i];}
+    }
+    return m;
+}
+
+int main(){
+  int tab[10];
+  int i, min,max;
+  printf ("WPISYWANIE DANYCH:\n");
+  for (i = 0; i < 10; i++){
+      scanf (" %d", &tab[i]);
+  }
+
+    min=minimalna(tab,10);
+    max=maksymalna(tab,10);
+    
+    printf("\nMIN: %d",min);
+    printf("\nMAX: %d",max);
+  return 0;
+}
