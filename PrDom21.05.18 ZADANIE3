@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int sumaElementow (int tablicawejsciowa[], int rozmiar){
+  int sumaEl = 0;
+  int licznik;
+  for (licznik = 0; licznik < rozmiar; licznik++)    {
+      sumaEl += tablicawejsciowa[licznik];
+    }
+  return sumaEl;
+}
+
+float sredniaElementow(int suma){
+    float srednia=suma/10.0;
+    return srednia;
+}
+
+float sred(int tab[], int rozm){
+    int sum=sumaElementow(tab,rozm);
+    float sr=sum/10.0;
+    return sr;
+}
+
+
+int main(){
+  int tab[10];
+  int i, suma;
+  suma = 0;
+  printf ("WPISYWANIE DANYCH:\n");
+  for (i = 0; i < 10; i++){
+      scanf (" %d", &tab[i]);
+      suma+=tab[i];
+  }
+
+    printf("\nSREDNIA: %f",sred(tab,i));
+    printf("\nSREDNIA: %f",sredniaElementow(suma));
+    printf("\nSUMA ELEMENTOW: %d",suma);
+  
+  return 0;
+}
