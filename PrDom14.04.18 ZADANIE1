@@ -1,0 +1,24 @@
+#include <stdio.h>
+#define JARD 1.0936133
+
+float mJard(float inputm){
+    float output;
+    output = inputm*JARD;
+        return output;
+}
+float JardStopy (float inputj){
+    float output;
+    output = inputj*3;
+    return output;
+}
+int main()
+{
+float metry, jard;
+
+scanf("%f" ,&metry);
+jard = mJard(metry);
+printf("%.2f metrow to %.2f jardow\n",metry, jard);
+printf("%.2f jardow to %.2f stop\n", jard, JardStopy(jard));
+
+    return 0;
+}
